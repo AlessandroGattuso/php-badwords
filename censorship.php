@@ -1,6 +1,6 @@
 <?php 
-  $paragraph = $_GET["paragraph"];
-  $word = $_GET["choosenWord"];
+  $paragraph = $_POST["paragraph"];
+  $word = $_POST["choosenWord"];
   $paragraph_censored = str_replace($word, '***', $paragraph);
 ?>
 
@@ -19,14 +19,14 @@
       <h5 class="card-header">Paragrafo originale</h5>
       <div class="card-body">
         <p><strong>Testo</strong>: <?php echo $paragraph; ?> </p>
-        <p><strong>Lunghezza</strong>: <?php echo strlen($paragraph);?> </p>
+        <p><strong>Lunghezza</strong>: <?php echo strlen(str_replace(' ', '', $paragraph));?> </p>
       </div>
     </div>
     <div class="card mt-5">
       <h5 class="card-header">Paragrafo censurato</h5>
       <div class="card-body">
         <p><strong>Testo</strong>: <?php echo $paragraph_censored; ?> </p>
-        <p><strong>Lunghezza</strong>: <?php echo strlen($paragraph_censored); ?> </p>
+        <p><strong>Lunghezza</strong>: <?php echo strlen(str_replace(' ', '', $paragraph_censored)); ?> </p>
       </div>
     </div>
   </div>

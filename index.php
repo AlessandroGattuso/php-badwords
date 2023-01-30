@@ -9,7 +9,7 @@
 </head>
 <body>
   <div class="container mt-5">
-    <form action="./censorship.php" method="GET">
+    <form action="./censorship.php" method="POST">
       <div class="mb-3">
         <label for="paragraph">Paragrafo</label>
         <textarea name="paragraph" class="form-control" rows="3" required></textarea>
