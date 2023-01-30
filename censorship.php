@@ -1,7 +1,7 @@
 <?php 
   $paragraph = $_POST["paragraph"];
   $word = $_POST["choosenWord"];
-  $paragraph_censored = str_replace($word, '***', $paragraph);
+  $paragraph_censored = str_replace(strtolower($word), '***', strtolower($paragraph));
 ?>
 
 <!DOCTYPE html>
